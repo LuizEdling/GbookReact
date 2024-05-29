@@ -1,0 +1,70 @@
+/*HEADER*/
+/*Geral*/
+header {
+    padding: 10px 20px;
+    background-color: rgb(27, 26, 26) !important;
+}
+
+/*Logo*/
+header .logo img{
+    max-width: 20vh;
+    height: auto;
+    margin-right: 20px;
+}
+
+
+/*Navbar*/
+header .logo, header #nav_topo {
+    float: none;
+}
+
+
+ul li a{
+    color: white !important;
+    font-size: 15px !important;
+}
+
+
+ul li a:hover{
+    color: #684ec5 !important;
+}
+
+
+.pagina-atual{
+    color: #FFBE0B !important;
+    text-decoration: underline !important;
+}
+
+
+.cor-barra-busca{
+    border: #623CEA 1px solid !important;
+    color: white !important;
+}
+
+
+.cor-barra-busca:hover, .cor-barra-busca:active{
+    background-color: #623CEA !important;
+}
+
+
+.dropdown-menu{
+    background-color: rgb(19, 19, 19) !important;
+}
+
+
+.dropdown-divider{
+    border-color: white !important;
+}
+
+
+.dropdown .btn, .dropdown .btn:hover{
+    background-color: rgb(27, 26, 26);
+}
+
+
+
+
+/*Mudando o ícone do menu 'hamburguer'*/
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
