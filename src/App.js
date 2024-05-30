@@ -1,12 +1,12 @@
+// src/App.js
 import React from 'react';
-import Header from './components/Header/index';
+import RoutesApp from './routes';
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <Header />
+      <RoutesApp/>
     </div>
   );
 }
-
-export default App;
