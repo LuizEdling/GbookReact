@@ -1,0 +1,17 @@
+/*FOOTER*/
+.site-footer {
+    background-color: rgb(27, 26, 26);
+    color: white;
+    padding: 20px 0;
+    margin-top: 0px;
+}
+
+.site-footer .container {
+    text-align: center;
+}
+
+.divider {
+    height: 2px; 
+    background-color: white; 
+    width: 100%;
+}
