@@ -1,87 +1,79 @@
 import React from 'react';
-//Importando arquivo CSS
+import { useNavigate } from 'react-router-dom';
+// Importando arquivo CSS
 import '../../assets/Login.css';
-//Importando BootStrap
+// Importando BootStrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-//Importando logo
+// Importando logo
 import logoGbook from '../../assets/images/GBOOK_LOGO2.png';
 
-function verify() {
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        var login = document.getElementById('document').value;
-        var senha = document.getElementById('password').value;
-        if(login == 'loginaluno@gmail.com' && senha == 'abc123'){
-            window.location.assign('/AtividadeFinal/Aluno/Home/home.html');
-        }
-
-        if(login == 'loginprofessor@gmail.com' && senha == '123abc'){
-            window.location.assign('/AtividadeFinal/Professor/Home/home.html');
-        }
-
-        if(login != 'loginaluno@gmail.com' && login != 'loginprofessor@gmail.com'){
-            document.querySelector(".errorMessageLogin").style.display = 'block';
-        }else{
-            document.querySelector(".errorMessageLogin").style.display = 'none';
-        }
-
-        if(senha != 'abc123' && senha != '123abc'){
-            document.querySelector(".errorMessagePassword").style.display = 'block';
-        }else{
-            document.querySelector(".errorMessagePassword").style.display = 'none';
-        }
-    });
-});
-}
-
-
-//Iniciando função Login
 export default function Login() {
-  //FAZER LÓGICA PARA O LOGIN  
+  const navigate = useNavigate(); // Hook para navegação programática
+
+  // Função para verificar o login
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const login = document.getElementById('document').value;
+    const senha = document.getElementById('password').value;
+
+    if (login === 'loginaluno@gmail.com' && senha === 'abc123') {
+      navigate('/Home'); // Redirecionar para a rota Home
+    } else if (login === 'loginprofessor@gmail.com' && senha === '123abc') {
+      navigate('/Home'); // Redirecionar para a rota Home
+    } else {
+      if (login !== 'loginaluno@gmail.com' && login !== 'loginprofessor@gmail.com') {
+        document.querySelector(".errorMessageLogin").style.display = 'block';
+      } else {
+        document.querySelector(".errorMessageLogin").style.display = 'none';
+      }
+
+      if (senha !== 'abc123' && senha !== '123abc') {
+        document.querySelector(".errorMessagePassword").style.display = 'block';
+      } else {
+        document.querySelector(".errorMessagePassword").style.display = 'none';
+      }
+    }
+  }
 
   return (
-    //Iniciando bloco geral
+    // Iniciando bloco geral
     <div id="bloco_login">
-      {/*Div para mostra da imagem direita da tela*/}
+      {/* Div para mostra da imagem direita da tela */}
       <div id="imagem"></div>
 
-      {/*Iniciando bloco do login em si*/}
+      {/* Iniciando bloco do login em si */}
       <div id="login"> 
-        {/*Logo GBook*/}
-        <h2 id="logo" class="azul">
-          <img src={logoGbook} alt="Título da Imagem" class="img-fluid"/>
+        {/* Logo GBook */}
+        <h2 id="logo" className="azul">
+          <img src={logoGbook} alt="Título da Imagem" className="img-fluid" />
         </h2>
 
-        {/*Form para coleta de dados*/}
+        {/* Form para coleta de dados */}
         <div id="loginDocument">
-          <form id="form" action={verify} method="post">
-            <label for="document" id="labelDocument" class="amarelo">Login</label>
-            <br/>
-
-            <div class="input-group" id="input-group" >
-              <input type="text" id="document" class="form-control" placeholder="Digite seu login..." required/>
-            </div>
-            
-            <p class="errorMessageLogin">Login Incorreto!</p>
-            <br/>
-            <label for="password" id="labelPassword" class="amarelo">Senha</label>
-            <br/>
-
-            <div class="input-group" id="input-group">
-              <input type="password" id="password" class="form-control" placeholder="Digite sua senha..." required/>
-            </div>
-
-            <p class="errorMessagePassword">Senha Incorreta!</p>
-            <br/>
-
+          <form id="form" onSubmit={handleSubmit}>
+            <label htmlFor="document" id="labelDocument" className="amarelo">Login</label>
+            <br />
 
             <div className="input-group" id="input-group">
-              <input type="submit" value="Enviar" id="submit" className="form-control"/>
+              <input type="text" id="document" className="form-control" placeholder="Digite seu login..." required />
             </div>
 
+            <p className="errorMessageLogin" style={{ display: 'none' }}>Login Incorreto!</p>
+            <br />
+            <label htmlFor="password" id="labelPassword" className="amarelo">Senha</label>
+            <br />
 
+            <div className="input-group" id="input-group">
+              <input type="password" id="password" className="form-control" placeholder="Digite sua senha..." required />
+            </div>
+
+            <p className="errorMessagePassword" style={{ display: 'none' }}>Senha Incorreta!</p>
+            <br />
+
+            <div className="input-group" id="input-group">
+              <input type="submit" value="Enviar" id="submit" className="form-control" />
+            </div>
           </form>
         </div>
       </div>
