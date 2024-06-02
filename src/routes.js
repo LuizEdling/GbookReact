@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Login from './components/Login'; // Adicione esta linha
-import Biblioteca from './pages/Biblioteca';
-import Disciplinas from './pages/Disciplinas';
-import Home from './pages/Home';
-import Perfil from './pages/Perfil';
-import Erro from './pages/Erro'; // Adicione esta linha
+import Login from './components/Login'; // importa a pag de  login
+import Biblioteca from './pages/Biblioteca'; //importa a pag de Biblioteca
+import Disciplinas from './pages/Disciplinas'; // importa a pag de disciplina
+import Home from './pages/Home'; // importa a pag de home
+import Perfil from './pages/Perfil'; // importa a pag de perfil
+import Erro from './pages/Erro'; // importa a pag de erro
 
 export default function RoutesApp(){
 return(
