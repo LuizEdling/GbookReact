@@ -1,0 +1,25 @@
+/*RESET CSS*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*BODY*/
+/*Alterando cor de fundo da página*/
+body{
+    background-color: rgb(27, 26, 26) !important;
+}
+
+h1,h2,p{
+    color: white;
+}
+
+
+.divider {
+    height: 2px; 
+    background-color: white; 
+    width: 100%;
+}
+
+

@@ -1,0 +1,18 @@
+/*GERAL*/
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background-color: rgb(27, 27, 27) !important;
+  }
+  
+  /*---------------------------*/
+
+#info-aluno #foto-aluno{
+    border-radius: 100%;
+    margin-bottom: 5px; /*Espaçamento estre foto e nome e instituição do aluno*/
+    margin-top: 25px;
+}
