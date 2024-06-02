@@ -2,7 +2,7 @@ import React from 'react';
 import '../../assets/ListagemCards.css'; // Importando o CSS ListagemCards
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando Bootstrap
 
-
+/*
 const MaisAcessados = ({ titulo }) => {
   const livros = [
     { id: 1, titulo: "Primeiro livro", descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ipsa placeat nam necessitatibus totam doloremque?", imagem: require('../../assets/images/capa-branca.jpg'), link: "/Livros" },
@@ -32,6 +32,23 @@ const MaisAcessados = ({ titulo }) => {
     </section>
   );
 };
-
-
 export default MaisAcessados;
+*/
+
+export default function ListagemCards(props){
+  <div>
+    <h1>{props.tituloLista}</h1>
+    <div className="row justify-content-center">
+      <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-stretch">
+        <div class="card mx-auto">
+          <img src={props.capaLivro} class="card-img-top card-img-size" alt={props.alt}/>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">{props.tituloLivro}</h5>
+              <p class="card-text">{props.descLivro}</p>
+              <a href={props.href} class="btn btn-primary mt-auto">Ler mais</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
