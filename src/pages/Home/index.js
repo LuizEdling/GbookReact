@@ -18,9 +18,7 @@ import slide3 from '../../assets/images/carousel/terceiro.png';
 import ListagemCards from '../../components/ListagemCards';
 //Dicionário para os cards
 const cardsList = [
-    {
-        tituloLista: "Mais acessados"
-    },
+    {},
     {},
     {},
     {},
