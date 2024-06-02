@@ -1,5 +1,5 @@
-import '../../assets/Footer.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../assets/Footer.css'; // Importando Footer
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importando Bootstrap
 
 const Footer = () => {
 
