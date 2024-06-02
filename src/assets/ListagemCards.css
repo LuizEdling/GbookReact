@@ -1,0 +1,53 @@
+/*GERAL*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+    background-color: rgb(27, 27, 27) !important;
+}
+  
+/*---------------------------*/
+
+h1{
+    font-size: 30px !important;
+}
+  
+/*Media query para ajustamento das imagens em telas de 990px ou menos de largura */
+@media only screen and (max-width: 991px){
+    #MaisAcessados .card{
+        margin-bottom: 20px !important;
+    }
+}
+
+/*Mais acessados*/
+#MaisAcessados .card-text{
+    color: black !important;
+}
+
+/*LIVROS RECOMENDADOS*/
+#MaisAcessados .card{
+    background-color: #fff !important;
+    border: 3px solid #623CEA !important;  
+    width: 18rem !important;
+    padding: 15px !important;
+}
+
+#MaisAcessados .card a{
+    background-color: #623CEA !important;
+}
+
+
+#MaisAcessados .card-img-size{
+    height: 200px;
+    object-fit: cover;
+}
+
+/*Media query para espaçamento dos cards para telas de 990px ou menos de largura */
+@media only screen and (max-width: 991px){
+    #MaisAcessados .card{
+        margin-bottom: 20px !important;
+    }
+}

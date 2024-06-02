@@ -1,0 +1,23 @@
+/*GERAL*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(27, 27, 27) !important;
+}
+
+
+
+.error {
+    max-width: 100%; /* Definir a largura máxima para 100% */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.img-fluid-max {
+    width: 100%; /* Define a largura máxima da imagem para 100% */
+    max-width: 900px; /* Define uma largura máxima de 1200 pixels */
+    height: auto; /* Mantém a proporção da imagem */
+}
