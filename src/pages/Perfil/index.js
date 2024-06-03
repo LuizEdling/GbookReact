@@ -1,18 +1,110 @@
+import '../../assets/Perfil.css' // Importando arquivo CSS do perfil
 import Header from '../../components/Header'; // Importando o Header
 import Footer from '../../components/Footer'; // Importando o Footer
-import ListagemCards from '../../components/ListagemCards'; // Importando as listagens
-import ListagemCardsPequenos from '../../components/ListagemCardsPequenos';
-import DadosPerfil from '../../components/DadosPerfil'; // Importando DadosPerfil
-import '../../assets/Perfil.css' // Importando arquivo CSS do perfil
 
-export default function Home(){
+import DadosPerfil from '../../components/DadosPerfil'; // Importando DadosPerfil
+
+//Importando listagem dos cards
+import CardsListG from '../../components/CardsListG';
+import CardItemG from '../../components/CardItemG';
+import CardsListP from '../../components/CardsListP';
+import CardItemP from '../../components/CardItemP';
+
+const cardsListDados = [
+    {
+        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        alt:"Livro 1",
+        Titulo:"Livro 1",
+        Desc:"Descrição do livro 1",
+        href:"#",
+    },
+    {
+        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        alt:"Livro 2",
+        Titulo:"Livro 2",
+        Desc:"Descrição do livro 2",
+        href:"#",
+    },
+    {
+        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        alt:"Livro 3",
+        Titulo:"Livro 3",
+        Desc:"Descrição do livro 3",
+        href:"#",
+    },
+    {
+        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        alt:"Livro 4",
+        Titulo:"Livro 4",
+        Desc:"Descrição do livro 4",
+        href:"#",
+    },
+]
+
+const histList = [
+    {
+        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        nomeLivro:"Livro 1",
+    },
+    {
+        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        nomeLivro:"Livro 2",
+    },
+    {
+        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        nomeLivro:"Livro 3",
+    },
+    {
+        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        nomeLivro:"Livro 4",
+    },
+    {
+        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        nomeLivro:"Livro 4",
+    },
+    {
+        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        nomeLivro:"Livro 4",
+    },
+]
+
+export default function Perfil(){  
     return(
         <div>
             <Header/>
             <div className="divider"></div>
-            <DadosPerfil Tipo="Aluno" Faculdade="Faculdade: Centro Universitario Campo Real" />
-            <ListagemCards titulo="Livros favoritos"/>
-            <ListagemCardsPequenos Titulo="Recém acessados"/>
+
+            <DadosPerfil/>
+            
+            <CardsListG titulo="Livros Favoritos">  
+                {
+                    cardsListDados.map(function(item) {
+                        return(
+                            <CardItemG
+                                ImgCapa={item.ImgCapa}
+                                alt={item.alt}
+                                Titulo={item.Titulo}
+                                Desc={item.Desc}
+                                href={item.href}
+                            />
+                        )
+                    })
+                }
+            </CardsListG>
+
+            <CardsListP titulo="Histórico">
+                {
+                    histList.map(function(item) {
+                        return(
+                            <CardItemG
+                                capaLivro={item.capaLivro}
+                                nomeLivro={item.nomeLivro}
+                            />
+                        )
+                    })
+                }
+            </CardsListP>
+
             <div className='divider'></div>
             <Footer/>
         </div>
