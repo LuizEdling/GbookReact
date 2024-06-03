@@ -15,19 +15,46 @@ import slide2 from '../../assets/images/carousel/segundo_slide.png';
 import slide3 from '../../assets/images/carousel/terceiro.png';
 
 //Importando listagem de cards
-import ListagemCards from '../../components/ListagemCards';
+import CardsListG from '../../components/CardsListG';
+import CardItemG from '../../components/CardItemG';
 //Dicionário para os cards
 const cardsList = [
-    {},
-    {},
-    {},
-    {},
+    {
+        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        alt:"Livro 1",
+        Titulo:"Livro 1",
+        Desc:"Descrição do livro 1",
+        href:"#",
+    },
+    {
+        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        alt:"Livro 2",
+        Titulo:"Livro 2",
+        Desc:"Descrição do livro 2",
+        href:"#",
+    },
+    {
+        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        alt:"Livro 3",
+        Titulo:"Livro 3",
+        Desc:"Descrição do livro 3",
+        href:"#",
+    },
+    {
+        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
+        alt:"Livro 4",
+        Titulo:"Livro 4",
+        Desc:"Descrição do livro 4",
+        href:"#",
+    },
 ]
+
 
 export default function Home(){
     return(
         <div>
             <Header/>
+
             <div id="carrossel">
                 <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
@@ -74,7 +101,23 @@ export default function Home(){
                 </div>
             </div>
             
-            <ListagemCards/>
+            <div id="MaisAcessados">
+            <CardsListG titulo="Mais Acessados">  
+                {
+                    cardsList.map(function(item) {
+                        return(
+                            <CardItemG
+                                ImgCapa={item.ImgCapa}
+                                alt={item.alt}
+                                Titulo={item.Titulo}
+                                Desc={item.Desc}
+                                href={item.href}
+                            />
+                        )
+                    })
+                }
+            </CardsListG>
+            </div>
 
             <div id="resenhas-livros" class="bg-dark text-white py-5">
                 <div class="container">
@@ -82,60 +125,60 @@ export default function Home(){
                     <div class="row g-4">
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="../Livros/assets/images/capa-branca.jpg" class="card-img-top" alt="Nome do Livro 1"/>
+                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 1"/>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 1</h5>
-                                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, laborum.</p>
+                                    <p class="card-text">Resenha do livro 1</p>
                                     <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="../Livros/assets/images/capa-branca.jpg" class="card-img-top" alt="Nome do Livro 2"/>
+                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 2"/>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 2</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ab ullam fuga laudantium non        repudiandae officiis velit cum similique iusto vero soluta, aliquid molestiae tenetur delectus illum est atque      reprehenderit?</p>
+                                    <p class="card-text">Resenha do livro 2</p>
                                     <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="../Livros/assets/images/capa-branca.jpg" class="card-img-top" alt="Nome do Livro 3"/>
+                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 3"/>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 3</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto minus vel magnam quod, earum       ipsum tempora aliquid. Ipsa, iure ut?</p>
+                                    <p class="card-text">Resenha do livro 3</p>
                                     <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="../Livros/assets/images/capa-branca.jpg" class="card-img-top" alt="Nome do Livro 4"/>
+                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 4"/>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 4</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam officia provident magnam      placeat architecto saepe fugit ullam porro voluptatibus.</p>
+                                    <p class="card-text">Resenha do livro 4</p>
                                     <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="../Livros/assets/images/capa-branca.jpg" class="card-img-top" alt="Nome do Livro 5"/>
+                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 5"/>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 5</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quaerat eaque sit tempore aliquam      laborum, quibusdam fugit ad sapiente, unde facilis exercitationem aliquid? Eveniet, corrupti!</p>
+                                    <p class="card-text">Resenha do livro 5</p>
                                     <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="../Livros/assets/images/capa-branca.jpg" class="card-img-top" alt="Nome do Livro 6"/>
+                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 6"/>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 6</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus nulla rem laboriosam cum amet      error, aperiam nisi ad sint quo laborum soluta, vel, aut dolor asperiores atque cumque. Dolores, nostrum.</p>
+                                    <p class="card-text">Resenha do livro 6</p>
                                     <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
                                 </div>
                             </div>

@@ -8,42 +8,14 @@
 
 /*Media query para ajustamento das imagens em telas de 990px ou menos de largura */
 @media only screen and (max-width: 991px){
-    #MaisAcessados .card{
+    #CardsListG .card{
         margin-bottom: 20px !important;
     }
 }
 
-/*Mais acessados*/
-#MaisAcessados h1{
-    justify-content: center;
-    align-items: center;
-}
-
-#MaisAcessados .card-text{
-    color: black !important;
-}
-
-/*LIVROS RECOMENDADOS*/
-#MaisAcessados .card{
-    background-color: #fff !important;
-    border: 3px solid #623CEA !important;  
-    width: 18rem !important;
-    padding: 15px !important;
-}
-
-#MaisAcessados .card a{
-    background-color: #623CEA !important;
-}
-
-
-#MaisAcessados .card-img-size{
-    height: 200px !important;
-    object-fit: cover !important;
-}
-
 /*Media query para espaçamento dos cards para telas de 990px ou menos de largura */
 @media only screen and (max-width: 991px){
-    #MaisAcessados .card{
+    #CardsListG .card{
         margin-bottom: 20px !important;
     }
 }

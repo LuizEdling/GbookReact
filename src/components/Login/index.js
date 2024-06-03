@@ -18,9 +18,11 @@ export default function Login() {
     const senha = document.getElementById('password').value;
 
     if (login === 'loginaluno@gmail.com' && senha === 'abc123') {
-      navigate('/Home'); // Redirecionar para a rota Home
+      localStorage.setItem('UserProfessor', 'false'); // Armazena o estado do usuário
+      navigate('/Home');
     } else if (login === 'loginprofessor@gmail.com' && senha === '123abc') {
-      navigate('/Home'); // Redirecionar para a rota Home
+      localStorage.setItem('UserProfessor', 'true'); // Armazena o estado do usuário
+      navigate('/Home');
     } else {
       if (login !== 'loginaluno@gmail.com' && login !== 'loginprofessor@gmail.com') {
         document.querySelector(".errorMessageLogin").style.display = 'block';
