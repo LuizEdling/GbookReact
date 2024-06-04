@@ -1,8 +1,9 @@
 import React from 'react';
-import Header from '../../components/Header'; //importa o header
-import Footer from '../../components/Footer'; // importa o footer
-import '../../assets/Disciplinas.css'; // importa o css
-import 'bootstrap/dist/css/bootstrap.min.css'; // importa o bootstrap
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import '../../assets/Disciplinas.css'; // Mantém a importação do CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom'; // Importa Link do react-router-dom
 
 import FotoUsuario from '../../assets/images/perfil-semfoto.jpg';
 import Capa1 from '../../assets/images/disciplina01.png';
@@ -13,16 +14,18 @@ import Capa5 from '../../assets/images/disciplina05.png';
 
 const Disciplinas = () => {
   const disciplinas = [
-    { id: 1, titulo: 'Desenvolvimento de Sistemas para Web/Mobile I', link: 'livros-materia1.html', capa: Capa1 },
-    { id: 2, titulo: 'Banco de Dados I', link: 'livros-materia2.html', capa: Capa2 },
-    { id: 3, titulo: 'Análise e Projetos de Sistemas I', link: 'livros-materia3.html', capa: Capa3 },
-    { id: 4, titulo: 'Normatização de Processo de Software', link: 'livros-materia4.html', capa: Capa4 },
-    { id: 5, titulo: 'Propriedade Intelectual e Legislação Tec.', link: 'livros-materia5.html', capa: Capa5 }
+    { id: 1, titulo: 'Desenvolvimento de Sistemas para Web/Mobile I', capa: Capa1 },
+    { id: 2, titulo: 'Banco de Dados I', capa: Capa2 },
+    { id: 3, titulo: 'Análise e Projetos de Sistemas I', capa: Capa3 },
+    { id: 4, titulo: 'Normatização de Processo de Software', capa: Capa4 },
+    { id: 5, titulo: 'Propriedade Intelectual e Legislação Tec.', capa: Capa5 }
   ];
 
   return (
     <>
       <Header />
+      <div className="divider"></div>
+
       <section id="disciplinas">
         {disciplinas.map(disciplina => (
           <div key={disciplina.id} className="disciplina" style={{ backgroundImage: `url(${disciplina.capa})` }}>
@@ -34,17 +37,20 @@ const Disciplinas = () => {
                   alt="Foto do Professor"
                   className="fotoUsuario"
                 />
-                <a href={disciplina.link}>
+                <Link to={`/pageDisciplinas/${encodeURIComponent(disciplina.titulo)}`} className="link"> 
                   <button className="acessar-disciplina">Acessar Disciplina</button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         ))}
       </section>
+
+      <div className="divider"></div>
       <Footer />
     </>
   );
 };
+
 
 export default Disciplinas;
