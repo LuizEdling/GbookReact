@@ -1,0 +1,14 @@
+.card {
+    margin-right: 10px; 
+}
+
+/*Pequeno ajuste no título do livro*/
+.card-body {
+    padding: 0.5rem; 
+}
+
+/*Mais ajustes no título do card*/
+.card-title {
+    font-size: 1rem; 
+    margin-bottom: 0; 
+}
