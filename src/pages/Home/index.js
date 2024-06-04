@@ -23,31 +23,31 @@ import CardItemG from '../../components/CardItemG';
 //Dicionário para os cards
 const cardsList = [
     {
-        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        alt:"Livro 1",
-        Titulo:"Livro 1",
-        Desc:"Descrição do livro 1",
+        ImgCapa:"https://cdn.culturagenial.com/imagens/1984-orwell-cke.jpg",
+        alt:"1984",
+        Titulo:"1984",
+        Desc:"A história é passada em um mundo em guerra e vigilância constantes, onde um regime...",
         href:"/Livro",
     },
     {
-        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        alt:"Livro 2",
-        Titulo:"Livro 2",
-        Desc:"Descrição do livro 2",
+        ImgCapa:"https://cdn.culturagenial.com/imagens/a-casa-dos-espiritos.jpg",
+        alt:"A casa dos espíritos",
+        Titulo:"A casa dos espíritos",
+        Desc:"É acompanhando os integrantes da família Trueba que mergulhamos em três...",
         href:"/Livro",
     },
     {
-        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        alt:"Livro 3",
-        Titulo:"Livro 3",
-        Desc:"Descrição do livro 3",
+        ImgCapa:"https://cdn.culturagenial.com/imagens/moby-dick-cke.jpg",
+        alt:"Moby Dick",
+        Titulo:"Moby Dick",
+        Desc:"Passado no mar, o livro conta a história de um navio baleeiro que persegue...",
         href:"/Livro",
     },
     {
-        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        alt:"Livro 4",
-        Titulo:"Livro 4",
-        Desc:"Descrição do livro 4",
+        ImgCapa:"https://cdn.culturagenial.com/imagens/a-hora-da-estrela.jpg",
+        alt:"A hora da estrela",
+        Titulo:"A hora da estrela",
+        Desc:"A trama apresenta Macabéa, uma jovem alagoana que chega no Rio de Janeiro e...",
         href:"/Livro",
     },
 ]
@@ -128,60 +128,60 @@ export default function Home(){
                     <div class="row g-4">
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 1"/>
+                                <img src="https://cdn.culturagenial.com/imagens/as-mil-e-uma-noites-cke.jpg" class="card-img-top" alt="Livro 1"/>
                                 <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Nome do Livro 1</h5>
-                                    <p class="card-text">Resenha do livro 1</p>
+                                    <h5 class="card-title">As Mil e uma Noites</h5>
+                                    <p class="card-text">Originárias do sul indiano e do médio oriente, As Mil e Uma Noites reúnem histórias do folclore...</p>
                                     <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 2"/>
+                                <img src="https://www.revistabula.com/wp/wp-content/uploads/2020/03/Hamlet.jpg.webp" class="card-img-top" alt="Livro 2"/>
                                 <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Nome do Livro 2</h5>
-                                    <p class="card-text">Resenha do livro 2</p>
+                                    <h5 class="card-title">Hamlet</h5>
+                                    <p class="card-text">O Rei Hamlet de Dinamarca acaba de morrer, deixando seu filho, o Príncipe Hamlet, e a viúva Rainha Gertrudes...</p>
                                     <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 3"/>
+                                <img src="https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-o-pequeno-principe-cke.jpg" class="card-img-top" alt="Livro 3"/>
                                 <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Nome do Livro 3</h5>
-                                    <p class="card-text">Resenha do livro 3</p>
+                                    <h5 class="card-title">O Pequeno Príncipe</h5>
+                                    <p class="card-text">Esse livro vale tanto pelas palavras quanto pelas ilustrações. Embora seja (oficialmente) um livro infantil</p>
                                     <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 4"/>
+                                <img src="https://cdn.maioresemelhores.com/imagens/mm-livros-para-ler-antes-de-morrer-vidas-secas.jpg" class="card-img-top" alt="Livro 4"/>
                                 <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Nome do Livro 4</h5>
-                                    <p class="card-text">Resenha do livro 4</p>
+                                    <h5 class="card-title">Vidas Secas</h5>
+                                    <p class="card-text">"Vidas Secas", um dos maiores tesouros da literatura brasileira, mergulha com maestria no universo...</p>
                                     <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 5"/>
+                                <img src="https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-eu-robo-cke.jpg" class="card-img-top" alt="Livro 5"/>
                                 <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Nome do Livro 5</h5>
-                                    <p class="card-text">Resenha do livro 5</p>
+                                    <h5 class="card-title">Eu, Robô</h5>
+                                    <p class="card-text">E se toda inteligência artificial fosse programada com 3 leis para proteger a humanidade? Essa é a ideia...</p>
                                     <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 bg-secondary text-white">
-                                <img src="https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9" class="card-img-top" alt="Livro 6"/>
+                                <img src="https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-a-redoma-de-vidro-cke.jpg" class="card-img-top" alt="Livro 6"/>
                                 <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Nome do Livro 6</h5>
-                                    <p class="card-text">Resenha do livro 6</p>
+                                    <h5 class="card-title">A Redoma de Vidro</h5>
+                                    <p class="card-text">Uma das maiores poetisas de todos os tempos, Sylvia Plath lançou A Redoma de Vidro em 1963. </p>
                                     <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>

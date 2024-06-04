@@ -15,59 +15,54 @@ import CardItemP from '../../components/CardItemP';
 
 const cardsListDados = [
     {
-        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        alt:"Livro 1",
-        Titulo:"Livro 1",
-        Desc:"Descrição do livro 1",
+        ImgCapa:"https://cdn.culturagenial.com/imagens/a-casa-dos-espiritos.jpg",
+        alt:"A casa dos espíritos",
+        Titulo:"A casa dos espíritos",
+        Desc:"É acompanhando os integrantes da família Trueba que mergulhamos em três...",
         href:"/Livro",
     },
     {
-        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        alt:"Livro 2",
-        Titulo:"Livro 2",
-        Desc:"Descrição do livro 2",
+        ImgCapa:"https://cdn.culturagenial.com/imagens/moby-dick-cke.jpg",
+        alt:"Moby Dick",
+        Titulo:"Moby Dick",
+        Desc:"Passado no mar, o livro conta a história de um navio baleeiro que persegue...",
         href:"/Livro",
     },
     {
-        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        alt:"Livro 3",
-        Titulo:"Livro 3",
-        Desc:"Descrição do livro 3",
+        ImgCapa:"https://cdn.culturagenial.com/imagens/a-hora-da-estrela.jpg",
+        alt:"A hora da estrela",
+        Titulo:"A hora da estrela",
+        Desc:"A trama apresenta Macabéa, uma jovem alagoana que chega no Rio de Janeiro e...",
         href:"/Livro",
     },
     {
-        ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        alt:"Livro 4",
-        Titulo:"Livro 4",
-        Desc:"Descrição do livro 4",
+        ImgCapa:"https://cdn.culturagenial.com/imagens/o-jogo-da-amarelinha-livro.jpg",
+        alt:"O jogo da amarelinha",
+        Titulo:"O jogo da amarelinha",
+        Desc:"Narra o romance entre um intelectual, Horacio Oliveira, e Maga, uma misteriosa uruguaia.",
         href:"/Livro",
     },
 ]
 
 const histList = [
     {
-        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        nomeLivro:"Livro 1",
+        capaLivro:"https://cdn.culturagenial.com/imagens/a-casa-dos-espiritos.jpg",
     },
     {
-        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        nomeLivro:"Livro 2",
+        capaLivro:"https://cdn.culturagenial.com/imagens/a-hora-da-estrela.jpg",
     },
     {
-        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        nomeLivro:"Livro 3",
+        capaLivro:"https://www.revistabula.com/wp/wp-content/uploads/2020/03/Hamlet.jpg.webp",
+
     },
     {
-        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        nomeLivro:"Livro 4",
+        capaLivro:"https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-o-pequeno-principe-cke.jpg",
     },
     {
-        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        nomeLivro:"Livro 4",
+        capaLivro:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW-LRil1jNo_MvXNDjqEyfOcMcdbuWrZWyTg&s",
     },
     {
-        capaLivro:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-        nomeLivro:"Livro 4",
+        capaLivro:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNk8Z91pXpjH2ai-XNI5AGh0oj2Co1-dfcLQ&s",
     },
 ]
 

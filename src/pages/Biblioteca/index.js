@@ -1,11 +1,15 @@
 import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import CardsBiblioteca from '../../components/CardsBiblioteca';
+
+import Header from '../../components/Header'; // importa o Header
+import Footer from '../../components/Footer'; //importa o Footer
+
 import '../../assets/Biblioteca.css'; // Importando CSS
 
-// Dados para os cartões
+import CardsBiblioteca from '../../components/CardsBiblioteca'; // importa o cardsBiblioteca
+
+// constante sectionData
 const sectionData = {
+  // 3 tipos de id com cards de cursos especificos 
   engenharias: {
     title: "Engenharia Agronômica",
     cards: [
