@@ -4,6 +4,9 @@ import Footer from '../../components/Footer'; // Importando o Footer
 
 import DadosPerfil from '../../components/DadosPerfil'; // Importando DadosPerfil
 
+//Importando Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 //Importando listagem dos cards
 import CardsListG from '../../components/CardsListG';
 import CardItemG from '../../components/CardItemG';
@@ -91,21 +94,24 @@ export default function Perfil(){
                     })
                 }
             </CardsListG>
-
-            <CardsListP titulo="Histórico">
-                {
-                    histList.map(function(item) {
-                        return(
-                            <CardItemG
-                                capaLivro={item.capaLivro}
-                                nomeLivro={item.nomeLivro}
-                            />
-                        )
-                    })
-                }
-            </CardsListP>
+            
+            <div id="historico" className="container mt-5">
+                <CardsListP titulo="Recém acessados">
+                    {
+                        histList.map(function(item) {
+                            return(
+                                <CardItemP
+                                    capaLivro={item.capaLivro}
+                                    nomeLivro={item.nomeLivro}
+                                />
+                            )
+                        })
+                    }
+                </CardsListP>
+            </div>
 
             <div className='divider'></div>
+            
             <Footer/>
         </div>
     );

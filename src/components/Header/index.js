@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importando o Link do React Router
+import { Link, useLocation } from 'react-router-dom'; // Importando o Link e useLocation do React Router
 import '../../assets/Header.css'; // Importando o css do Header
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando Bootstrap
 import logo from '../../assets/images/logo-gbook.png'; // Importando a logo
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation(); // Hook do React Router para obter a localização atual
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    // Determina qual link deve ter a classe 'pagina-atual' com base na URL atual
+    const getLinkClass = (path) => {
+        return location.pathname === path ? 'nav-link pagina-atual' : 'nav-link';
     };
 
     return (
@@ -26,16 +32,16 @@ const Header = () => {
                     <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link pagina-atual" aria-current="page" to="/home">Início</Link>
+                                <Link className={getLinkClass('/Home')} to="/Home">Início</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/disciplinas">Disciplinas</Link>
+                                <Link className={getLinkClass('/Disciplinas')} to="/Disciplinas">Disciplinas</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/biblioteca">Biblioteca</Link>
+                                <Link className={getLinkClass('/Biblioteca')} to="/Biblioteca">Biblioteca</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/perfil">Perfil</Link>
+                                <Link className={getLinkClass('/Perfil')} to="/Perfil">Perfil</Link>
                             </li>
                         </ul>
                         <form className="d-flex">
