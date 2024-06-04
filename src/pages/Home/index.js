@@ -1,6 +1,9 @@
 //Importando arquivo externo CSS
 import '../../assets/Home.css';
 
+//importando o {Link}
+import { Link } from 'react-router-dom';
+
 //Importando Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -24,28 +27,28 @@ const cardsList = [
         alt:"Livro 1",
         Titulo:"Livro 1",
         Desc:"Descrição do livro 1",
-        href:"#",
+        href:"/Livro",
     },
     {
         ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
         alt:"Livro 2",
         Titulo:"Livro 2",
         Desc:"Descrição do livro 2",
-        href:"#",
+        href:"/Livro",
     },
     {
         ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
         alt:"Livro 3",
         Titulo:"Livro 3",
         Desc:"Descrição do livro 3",
-        href:"#",
+        href:"/Livro",
     },
     {
         ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
         alt:"Livro 4",
         Titulo:"Livro 4",
         Desc:"Descrição do livro 4",
-        href:"#",
+        href:"/Livro",
     },
 ]
 
@@ -129,7 +132,7 @@ export default function Home(){
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 1</h5>
                                     <p class="card-text">Resenha do livro 1</p>
-                                    <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +142,7 @@ export default function Home(){
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 2</h5>
                                     <p class="card-text">Resenha do livro 2</p>
-                                    <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +152,7 @@ export default function Home(){
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 3</h5>
                                     <p class="card-text">Resenha do livro 3</p>
-                                    <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +162,7 @@ export default function Home(){
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 4</h5>
                                     <p class="card-text">Resenha do livro 4</p>
-                                    <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +172,7 @@ export default function Home(){
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 5</h5>
                                     <p class="card-text">Resenha do livro 5</p>
-                                    <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
@@ -179,7 +182,7 @@ export default function Home(){
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nome do Livro 6</h5>
                                     <p class="card-text">Resenha do livro 6</p>
-                                    <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
                                 </div>
                             </div>
                         </div>
