@@ -2,57 +2,151 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import CardsBiblioteca from '../../components/CardsBiblioteca';
-import '../../assets/Biblioteca.css'; // Importando CSS 
+import '../../assets/Biblioteca.css'; // Importando CSS
 
-const Modulos = {
+// Dados para os cartões
+const sectionData = {
   engenharias: {
-    title: "Engenharias",
+    title: "Engenharia Agronômica",
     cards: [
-      { link: "../Cursos-eng/eng-agro.html", imgSrc: "assets/images/eng-agro.jpg", imgAlt: "Eng. Agronômica", title: "Eng. Agronômica" },
-      { link: "../Cursos-eng/eng-civil.html", imgSrc: "assets/images/eng-civil.jpg", imgAlt: "Eng. Civil", title: "Eng. Civil" },
-      { link: "../Cursos-eng/eng-soft.html", imgSrc: "assets/images/eng-soft.png", imgAlt: "Eng. de Software", title: "Eng. de Software" },
-      { link: "../Cursos-eng/eng-eletrica.html", imgSrc: "assets/images/eng-eletrica.png", imgAlt: "Eng. Elétrica", title: "Eng. Elétrica" },
-      { link: "../Cursos-eng/eng-mecanica.html", imgSrc: "assets/images/eng-mecanica.png", imgAlt: "Eng. Mecânica", title: "Eng. Mecânica" },
-    ]
+      {
+        imgSrc: require('../../assets/images/eng-agro.jpg'),
+        imgAlt: "Engenharia Agronômica",
+        title: "Engenharia Agronômica",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/eng-civil.jpg'),
+        imgAlt: "Engenharia Civil",
+        title: "Engenharia Civil",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/eng-eletrica.png'),
+        imgAlt: "Engenharia Elétrica",
+        title: "Engenharia Elétrica",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/eng-mecanica.png'),
+        imgAlt: "Engenharia Mecânica",
+        title: "Engenharia Mecânica",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/eng-soft.png'),
+        imgAlt: "Engenharia de Software",
+        title: "Engenharia de Software",
+        link: "#",
+      },
+    ],
   },
-  saude: {
+  cienciasSaude: {
     title: "Ciências da Saúde",
-    cards: [
-      { link: "../Cursos-saude/biomedicina.html", imgSrc: "assets/images/saude/biomed.png", imgAlt: "Biomedicina", title: "Biomedicina" },
-      { link: "../Cursos-saude/enfermagem.html", imgSrc: "assets/images/saude/enfermagem.png", imgAlt: "Enfermagem", title: "Enfermagem" },
-      { link: "../Cursos-saude/farmacia.html", imgSrc: "assets/images/saude/farmacia.png", imgAlt: "Farmácia", title: "Farmácia" },
-      { link: "../Cursos-saude/fisioterapia.html", imgSrc: "assets/images/saude/fisioterapia.png", imgAlt: "Fisioterapia", title: "Fisioterapia" },
-      { link: "../Cursos-saude/medicina.html", imgSrc: "assets/images/saude/medicina.png", imgAlt: "Medicina", title: "Medicina" },
-      { link: "../Cursos-saude/med-vet.html", imgSrc: "assets/images/saude/med-vet.png", imgAlt: "Medicina Veterinária", title: "Med. Veterinária" },
-      { link: "../Cursos-saude/nutri.html", imgSrc: "assets/images/saude/nutricao.png", imgAlt: "Nutrição", title: "Nutrição" },
-      { link: "../Cursos-saude/odonto.html", imgSrc: "assets/images/saude/odonto.png", imgAlt: "Odontologia", title: "Odontologia" },
-      { link: "../Cursos-saude/psicologia.html", imgSrc: "assets/images/saude/psicologia.png", imgAlt: "Psicologia", title: "Psicologia" },
-    ]
+    cards:[
+      {
+        imgSrc: require('../../assets/images/biomed.png'),
+        imgAlt: "Biomedicina",
+        title: "Biomedicina",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/enfermagem.png'),
+        imgAlt: "Enfermagem",
+        title: "Enfermagem",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/farmacia.png'),
+        imgAlt: "Farmacia",
+        title: "Farmacia",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/fisioterapia.png'),
+        imgAlt: "Fisioterapia",
+        title: "Fisioterapia",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/medicina.png'),
+        imgAlt: "Medicina",
+        title: "Medicina",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/med-vet.png'),
+        imgAlt: "Medicina Veterinária",
+        title: "Medicina Veterinária",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/nutricao.png'),
+        imgAlt: "Nutrição",
+        title: "Nutrição",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/odonto.png'),
+        imgAlt: "Odontologia",
+        title: "Odontologia",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/psicologia.png'),
+        imgAlt: "Psicologia",
+        title: "Psicologia",
+        link: "#",
+      },
+    ],
   },
-  cienciasSociaisAplicadas: {
-    title: "Ciências Sociais Aplicadas",
+  cienciasSociais: {
+    title: "Ciências Sociais Aplicadas ",
     cards: [
-      { link: "../Cursos-c-s-a/adm.html", imgSrc: "assets/images/ciencias-s-a/adm.png", imgAlt: "Administração", title: "Administração" },
-      { link: "../Cursos-c-s-a/ciencias-cont.html", imgSrc: "assets/images/ciencias-s-a/contabeis.png", imgAlt: "Ciências Contábeis", title: "Ciências Contábeis" },
-      { link: "../Cursos-c-s-a/direito.html", imgSrc: "assets/images/ciencias-s-a/direito.png", imgAlt: "Direito", title: "Direito" },
-      { link: "../Cursos-c-s-a/publi.html", imgSrc: "assets/images/ciencias-s-a/publi.png", imgAlt: "Publicidade e Propaganda", title: "Publicidade e P." },
-      { link: "../Cursos-c-s-a/arq-urb.html", imgSrc: "assets/images/ciencias-s-a/arq-urb.png", imgAlt: "Arquitetura e Urbanismo", title: "Arquitetura e Urb." },
-    ]
-  }
+      {
+        imgSrc: require('../../assets/images/adm.png'),
+        imgAlt: "Administração",
+        title: "Administração",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/contabeis.png'),
+        imgAlt: "Ciências Contabeis",
+        title: "Ciências Contabeis",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/direito.png'),
+        imgAlt: "Direito",
+        title: "Direito",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/publi.png'),
+        imgAlt: "Publicidade e Propaganda",
+        title: "Publicidade e Propaganda",
+        link: "#",
+      },
+      {
+        imgSrc: require('../../assets/images/arq-urb.png'),
+        imgAlt: "Arquitetura e Urbanismo",
+        title: "Arquitetura e Urbanismo",
+        link: "#",
+      },
+    ],
+  },
 };
 
-function Biblioteca () {
+export default function Biblioteca() {
   return (
-    <main>
-        <Header/>
-        <div className="divider"></div>
-        {Object.keys(Modulos).map(sectionId => (
-          <CardsBiblioteca key={sectionId} sectionId={sectionId} sectionData={Modulos[sectionId]} />
-        ))}
-        <div className="divider"></div>
-        <Footer/>
-    </main>
+    <div>
+      <Header />
+      <div className="divider"></div>
+      <CardsBiblioteca sectionId="engenharias" sectionData={sectionData} />
+      <CardsBiblioteca sectionId="cienciasSaude" sectionData={sectionData} />
+      <CardsBiblioteca sectionId="cienciasSociais" sectionData={sectionData} />
+      <div className='divider'></div>
+      <Footer />
+    </div>
   );
 }
-
-export default Biblioteca;
