@@ -1,44 +1,49 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import '../../assets/pageDisciplinas.css';
+import Header from '../../components/Header'; // importa o Header
+import Footer from '../../components/Footer'; //importa o Footer
 
-import CardsListG from '../../components/CardsListG';
-import CardItemG from '../../components/CardItemG';
+import '../../assets/pageDisciplinas.css';  // importa o CSS
 
+import CardsListG from '../../components/CardsListG'; // importa o CardsListG
+import CardItemG from '../../components/CardItemG'; // importa o CardsItemG
+
+// define a const cardListdados
 const cardsListDados = [
+  // cria um array para cada objeto
   {
-      ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-      alt:"Livro 1",
-      Titulo:"Livro 1",
-      Desc:"Descrição do livro 1",
+      ImgCapa:"https://m.media-amazon.com/images/I/41GTBwfv0TL._SY445_SX342_.jpg",
+      alt:"Engenharia de Software Moderna",
+      Titulo:"Engenharia de Software Moderna",
+      Desc:"Engenharia de Software Moderna...",
       href:"/Livro",
   },
   {
-      ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-      alt:"Livro 2",
-      Titulo:"Livro 2",
-      Desc:"Descrição do livro 2",
+      ImgCapa:"https://m.media-amazon.com/images/I/413RVBFxTRL._SY445_SX342_.jpg",
+      alt:"Fundamentos da arquitetura de Software",
+      Titulo:"Fundamentos da arquitetura de Software",
+      Desc:"A narrativa é passada na aldeia fictícia de Macondo e segue várias gerações da família Buendía–Iguarána",
       href:"/Livro",
   },
   {
-      ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-      alt:"Livro 3",
-      Titulo:"Livro 3",
-      Desc:"Descrição do livro 3",
+      ImgCapa:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW-LRil1jNo_MvXNDjqEyfOcMcdbuWrZWyTg&s",
+      alt:"O universo da programação",
+      Titulo:"O universo da programação",
+      Desc:"Desenvolvimento de software não é mais somente uma área de trabalho, mas um verdadeiro ..",
       href:"/Livro",
   },
   {
-      ImgCapa:"https://img.freepik.com/vetores-gratis/vazio-livro-realista-mockup-modelo-vetorial_1017-9207.jpg?w=740&t=st=1717417918~exp=1717418518~hmac=373ee0b0dea1ba5df1fbf387686d934f3ddb21f71797c74ed5359eed3f84d1c9",
-      alt:"Livro 4",
-      Titulo:"Livro 4",
-      Desc:"Descrição do livro 4",
+      ImgCapa:"https://images-na.ssl-images-amazon.com/images/I/51sZW87slRL._SX375_BO1,204,203,200_.jpg",
+      alt:"Domain-Driven Design",
+      Titulo:"Domain-Driven Design",
+      Desc:"Este livro, assim como o Padrões de Arquitetura, vai te dar outra visão sobre desenvolvimento de software.",
       href:"/Livro",
   },
 ]
 
-function PageDisciplinas() { // Renomeie para PageDisciplinas com letra maiúscula
+// define o componente pageDisciplinas
+function PageDisciplinas() {  
+  //usa um hook "useParams" para pegar o parametro title de URL "  
   const { title } = useParams();
 
   return (
@@ -46,24 +51,25 @@ function PageDisciplinas() { // Renomeie para PageDisciplinas com letra maiúscu
       <Header/>
       <div className="divider"></div>
       
+      {/* exibe o valor do parametro*/}
       <div className='titulo'>
         <h1>{title}</h1>
       </div>
 
-      <CardsListG>  
-                {
-                    cardsListDados.map(function(item) {
-                        return(
-                            <CardItemG
-                                ImgCapa={item.ImgCapa}
-                                alt={item.alt}
-                                Titulo={item.Titulo}
-                                Desc={item.Desc}
-                                href={item.href}
-                            />
-                        )
-                    })
-                }
+      {/* pega os dados inseridos no array acima e exibe */}   
+      <CardsListG> {     
+        cardsListDados.map(function(item) {
+            return(
+                <CardItemG
+                    ImgCapa={item.ImgCapa}
+                    alt={item.alt}
+                    Titulo={item.Titulo}
+                    Desc={item.Desc}
+                    href={item.href}
+                />
+            )
+        })
+      }
       </CardsListG>
 
       <div className="divider"></div>
@@ -72,4 +78,4 @@ function PageDisciplinas() { // Renomeie para PageDisciplinas com letra maiúscu
   );
 }
 
-export default PageDisciplinas; // Exporte PageDisciplinas corretamente
+export default PageDisciplinas;
