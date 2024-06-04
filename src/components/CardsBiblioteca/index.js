@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../assets/CardsBiblioteca.css';
 
 const CardsBiblioteca = ({ sectionId, sectionData }) => {
@@ -14,12 +15,12 @@ const CardsBiblioteca = ({ sectionId, sectionData }) => {
         <h2 className="mb-4">{section.title}</h2>
         <div className="scrolling-wrapper">
           {section.cards.map((card, index) => (
-            <a key={index} href={card.link}>
+            <Link key={index} to={`/curso/${encodeURIComponent(card.title)}`} className="card-link">
               <div className="card">
                 <img src={card.imgSrc} className="card-img-top" alt={card.imgAlt} />
                 <h5 className="card-title">{card.title}</h5>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
