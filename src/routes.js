@@ -8,6 +8,7 @@ import Erro from './pages/Erro';
 import Curso from './pages/Curso';
 import PageDisciplinas from './pages/PageDisciplinas'; 
 import Livro from './pages/Livro';
+import TestLogin from './components/TestLogin';
 
 export default function RoutesApp(){
     return(
@@ -21,6 +22,7 @@ export default function RoutesApp(){
                 <Route path="/Curso/:title" element={<Curso/>}/>
                 <Route path="/pageDisciplinas/:title" element={<PageDisciplinas/>}/>
                 <Route path="/Livro" element={<Livro />} />
+                <Route path="/testlogin" element={<TestLogin />} />
                 <Route path="*" element={<Erro/>}/>
             </Routes>
         </BrowserRouter>

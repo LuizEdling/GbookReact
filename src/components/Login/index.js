@@ -1,11 +1,12 @@
+// arrumar imagens do carrossel
+// alterar dois campos seguintes
+// criar carrossel com imagens dos livros mais simplficado, estilo darkside 
+
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-// Importando arquivo CSS
-import '../../assets/Login.css';
-// Importando BootStrap
-import 'bootstrap/dist/css/bootstrap.min.css';
-// Importando logo
-import logoGbook from '../../assets/images/GBOOK_LOGO2.png';
+import { useNavigate } from 'react-router-dom'; // Hook para navegação
+import '../../assets/Login.css'; // Arquivo CSS
+import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap
+import logoGbook from '../../assets/images/GBOOK_LOGO2.png'; // Logo GBook
 
 export default function Login() {
   const navigate = useNavigate(); // Hook para navegação programática
@@ -47,8 +48,8 @@ export default function Login() {
       {/* Iniciando bloco do login em si */}
       <div id="login"> 
         {/* Logo GBook */}
-        <h2 id="logo" className="azul">
-          <img src={logoGbook} alt="Título da Imagem" className="img-fluid" />
+        <h2 id="logo">
+          <img src={logoGbook} alt="Logo GBook" className="img-fluid" />
         </h2>
 
         {/* Form para coleta de dados */}
