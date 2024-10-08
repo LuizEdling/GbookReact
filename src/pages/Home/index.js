@@ -1,8 +1,8 @@
 //Importando arquivo externo CSS
-import '../../assets/Home.css';
+import '../Home/Home.css';
 
-//importando o {Link}
-import { Link } from 'react-router-dom';
+//Importando a função Link
+//import { Link } from 'react-router-dom';
 
 //Importando Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,10 +17,13 @@ import slide1 from '../../assets/images/carousel/primeiro_slide.png';
 import slide2 from '../../assets/images/carousel/segundo_slide.png';
 import slide3 from '../../assets/images/carousel/terceiro.png';
 
-//Importando listagem de cards
-import CardsListG from '../../components/CardsListG';
-import CardItemG from '../../components/CardItemG';
+
+import HomeListaAutores from '../../components/HomeListaAutores';
+import HomeListaLivros from '../../components/HomeListaLivros';
+
+//ALTERAR PARA UMA API !!!!!
 //Dicionário para os cards
+/*
 const cardsList = [
     {
         ImgCapa:"https://cdn.culturagenial.com/imagens/1984-orwell-cke.jpg",
@@ -51,7 +54,7 @@ const cardsList = [
         href:"/Livro",
     },
 ]
-
+*/
 
 export default function Home(){
     return(
@@ -104,93 +107,17 @@ export default function Home(){
                 </div>
             </div>
             
+            <div id="Autores">
+                <HomeListaAutores tituloSecao="Autores mais acessados"/>
+            </div>
+
+            <div id="AdicionadosRecentemente">
+                <HomeListaLivros tituloSecao="Adicionados recentemente"/>
+            </div>
+
             <div id="MaisAcessados">
-            <CardsListG titulo="Mais Acessados">  
-                {
-                    cardsList.map(function(item) {
-                        return(
-                            <CardItemG
-                                ImgCapa={item.ImgCapa}
-                                alt={item.alt}
-                                Titulo={item.Titulo}
-                                Desc={item.Desc}
-                                href={item.href}
-                            />
-                        )
-                    })
-                }
-            </CardsListG>
+                <HomeListaLivros tituloSecao="Mais acessados"/>
             </div>
-
-            <div id="resenhas-livros" class="bg-dark text-white py-5">
-                <div class="container">
-                    <h2 class="text-center mb-4">Resenhas de Livros</h2>
-                    <div class="row g-4">
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="card h-100 bg-secondary text-white">
-                                <img src="https://cdn.culturagenial.com/imagens/as-mil-e-uma-noites-cke.jpg" class="card-img-top" alt="Livro 1"/>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">As Mil e uma Noites</h5>
-                                    <p class="card-text">Originárias do sul indiano e do médio oriente, As Mil e Uma Noites reúnem histórias do folclore...</p>
-                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="card h-100 bg-secondary text-white">
-                                <img src="https://www.revistabula.com/wp/wp-content/uploads/2020/03/Hamlet.jpg.webp" class="card-img-top" alt="Livro 2"/>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Hamlet</h5>
-                                    <p class="card-text">O Rei Hamlet de Dinamarca acaba de morrer, deixando seu filho, o Príncipe Hamlet, e a viúva Rainha Gertrudes...</p>
-                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="card h-100 bg-secondary text-white">
-                                <img src="https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-o-pequeno-principe-cke.jpg" class="card-img-top" alt="Livro 3"/>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">O Pequeno Príncipe</h5>
-                                    <p class="card-text">Esse livro vale tanto pelas palavras quanto pelas ilustrações. Embora seja (oficialmente) um livro infantil</p>
-                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="card h-100 bg-secondary text-white">
-                                <img src="https://cdn.maioresemelhores.com/imagens/mm-livros-para-ler-antes-de-morrer-vidas-secas.jpg" class="card-img-top" alt="Livro 4"/>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Vidas Secas</h5>
-                                    <p class="card-text">"Vidas Secas", um dos maiores tesouros da literatura brasileira, mergulha com maestria no universo...</p>
-                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="card h-100 bg-secondary text-white">
-                                <img src="https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-eu-robo-cke.jpg" class="card-img-top" alt="Livro 5"/>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Eu, Robô</h5>
-                                    <p class="card-text">E se toda inteligência artificial fosse programada com 3 leis para proteger a humanidade? Essa é a ideia...</p>
-                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="card h-100 bg-secondary text-white">
-                                <img src="https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-a-redoma-de-vidro-cke.jpg" class="card-img-top" alt="Livro 6"/>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">A Redoma de Vidro</h5>
-                                    <p class="card-text">Uma das maiores poetisas de todos os tempos, Sylvia Plath lançou A Redoma de Vidro em 1963. </p>
-                                    <Link to="/Livro" className="btn btn-primary mt-auto">Leia mais</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="divider"></div>
 
             <Footer/>
         </div>

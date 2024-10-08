@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom'; // Importando o Link e useLocation do React Router
-import '../../assets/Header.css'; // Importando o css do Header
+import '../Header/Header.css'; // Importando o css do Header
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando Bootstrap
 import logo from '../../assets/images/logo-gbook.png'; // Importando a logo
 
