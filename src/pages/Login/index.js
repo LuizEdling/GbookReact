@@ -1,46 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import './Login.css';
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom'; 
 
-import { auth , updatePassword } from '../../firebase/firebaseConnection';
-
+//Firebase
+import { auth } from '../../firebase/firebaseConnection';
 import {
-  signInWithEmailAndPassword
-} from 'firebase/auth'
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider
+} from 'firebase/auth';
 
-import GBLogo from '../../assets/images/login/LogoMin.png'
+//Imagens
+import GBLogo from '../../assets/images/login/LogoMin.png';
 import mascote from '../../assets/images/login/mascote.png';
 
-export default function TestLogin(){
+
+export default function TestLogin() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [erroLogin, setErroLogin] = useState("");
 
-  //const [DetalhesUsuario, setDetalhesUsuario] = useState("");
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  async function loginSubmit(event){
+  async function loginSubmit(event) {
     event.preventDefault();
     await signInWithEmailAndPassword(auth, email, senha)
-    .then(
-      (value)=>{
-        /*
-        setDetalhesUsuario({
-          id: value.user.id,
-          email: value.user.email,
-        })
-        */
+      .then((value) => {
         setEmail("");
         setSenha("");
-        setErroLogin(false);
         navigate('/Home');
-      }
-    ).catch((error)=>{
-      setErroLogin(true);
-    })
+      })
+      .catch((error) => {
+        setErroLogin(true);
+      });
+  }
+
+  async function loginWithGoogle() {
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider)
+      .then((result) => {
+        // O usuário foi autenticado com sucesso
+        const user = result.user;
+        console.log("Usuário logado com Google: ", user);
+        navigate('/Home'); // Navega para a página principal após o login
+      })
+      .catch((error) => {
+        console.error("Erro ao autenticar com Google: ", error);
+        setErroLogin(true);
+      });
   }
 
   return (
@@ -78,7 +85,7 @@ export default function TestLogin(){
           )}
 
           <button type="submit">Entrar</button>
-          <a href="#">Entrar com Gmail</a>
+          <button type="button" onClick={loginWithGoogle}>Entrar com Gmail</button> {/* Botão para login com Google */}
         </form>
       </div>
 
@@ -89,4 +96,5 @@ export default function TestLogin(){
         />
       </div>
     </div>
-)};
+  );
+}
