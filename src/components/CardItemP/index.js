@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/CardItemP.css'; // Importando o CSS ListagemCards
+import '../CardItemP/CardItemP.css'; // Importando o CSS ListagemCards
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando bootstrap
 
 export default function CardItemP(props) {

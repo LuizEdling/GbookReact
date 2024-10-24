@@ -1,0 +1,58 @@
+.AutorsList-container {
+  padding: 1% 10%;
+  margin: 20px 0px;
+}
+
+.AutorsList-container h3{
+  color: #f4f0f0;
+  font-size: 2.5vw;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.AutorsList-container .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AutorsList-container img {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+/*Arrows*/
+.AutorsList-container .slick-prev:before, 
+.AutorsList-container .slick-next:before {
+  color: white;
+  font-size: 30px;
+  opacity: 1;
+}
+
+.AutorsList-container .slick-dots{
+  display: none !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  /*Arrows*/
+  .AutorsList-container .slick-prev, .slick-next{
+    display: none !important;
+  }
+}
+
+/*Titulo da seção*/
+@media only screen and (max-width: 900px){
+  .AutorsList-container h3{
+    font-size: 3.5vw;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .AutorsList-container h3{
+    font-size: 4.5vw;
+  }
+}

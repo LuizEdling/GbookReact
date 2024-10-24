@@ -1,0 +1,27 @@
+footer.site-footer {
+    background-color: #272727;
+    color: white;
+    padding: 10px 0;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+footer.site-footer .footer-container {
+    text-align: center;
+}
+
+footer.site-footer img {
+    filter: brightness(0) invert(1); /*Filtro para deixar os icones brancos*/
+    padding: 8px;
+}
+
+/* Adicionando a classe footer-icons para uma organização flexível e responsiva */
+footer.site-footer .footer-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 2vw; 
+}
+
+footer.site-footer .footer-icons img {
+    width: 80px;
+}

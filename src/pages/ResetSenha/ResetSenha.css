@@ -1,0 +1,74 @@
+.ResetContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #efeeee;
+  justify-content: center;
+}
+
+.ResetForm {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ResetForm img {
+  width: 120px;
+}
+
+.ResetForm h1{
+  color: black;
+  font-size: 50px;
+}
+
+.ResetForm h3{
+  color: black;
+  font-size: 18px;
+}
+
+.ResetForm input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #000; 
+  outline: none; /*Tirar contorno ao clicar na caixa de input*/
+  font-weight: bold;
+  background-color: transparent; /* Fundo transparente */
+}
+
+.ResetForm input::placeholder {
+  font-weight: bold; 
+  color: #000; 
+}
+
+/*Mudar estilo do input ao clicar*/
+.ResetForm input:focus {
+  color: #000;
+  border-bottom: 2px solid #623cea;
+}
+
+#alert{
+  color: #ff2800;
+}
+
+.ResetForm button {
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  transition: .2s;
+}
+
+.ResetForm button:hover {
+  transition: .2s;
+  background-color: #623cea;
+}

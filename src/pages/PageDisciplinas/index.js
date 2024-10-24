@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Header from '../../components/Header'; // importa o Header
 import Footer from '../../components/Footer'; //importa o Footer
 
-import '../../assets/pageDisciplinas.css';  // importa o CSS
+import '../PageDisciplinas/PageDisciplinas.css';  // importa o CSS
 
 import CardsListG from '../../components/CardsListG'; // importa o CardsListG
 import CardItemG from '../../components/CardItemG'; // importa o CardsItemG

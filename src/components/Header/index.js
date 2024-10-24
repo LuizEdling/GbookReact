@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom'; // Importando o Link e useLocation do React Router
-import '../../assets/Header.css'; // Importando o css do Header
+import '../Header/Header.css'; // Importando o css do Header
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando Bootstrap
 import logo from '../../assets/images/logo-gbook.png'; // Importando a logo
 
-const Header = () => {
+export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation(); // Hook do React Router para obter a localização atual
 
@@ -22,7 +22,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg navbar-custom">
                 <div className="container-fluid">
                     <div className="logo">
-                        <Link className="navbar-brand" to="/">
+                        <Link className="navbar-brand" to="/Home">
                             <img id="logoImage" src={logo} alt="logo-gbook" />
                         </Link>
                     </div>
@@ -54,5 +54,3 @@ const Header = () => {
         </header>
     );
 };
-
-export default Header;

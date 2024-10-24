@@ -1,19 +1,24 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
+
+import Login from './pages/Login';
+import Home from './pages/Home';
 import Biblioteca from './pages/Biblioteca';
 import Disciplinas from './pages/Disciplinas';
-import Home from './pages/Home';
 import Perfil from './pages/Perfil';
-import Erro from './pages/Erro';
+import ResetSenha from './pages/ResetSenha';
+
 import Curso from './pages/Curso';
 import PageDisciplinas from './pages/PageDisciplinas'; 
 import Livro from './pages/Livro';
+
+import Erro from './pages/Erro';
 
 export default function RoutesApp(){
     return(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login/>}/>
+                <Route path="/ResetSenha" element={<ResetSenha/>}/>
                 <Route path="/Home" element={<Home/>}/>
                 <Route path="/Biblioteca" element={<Biblioteca/>}/>
                 <Route path="/Disciplinas" element={<Disciplinas/>}/>
