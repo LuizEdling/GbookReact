@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import '../../assets/Curso.css'
+import '../Curso/Curso.css'
 
 import CardsListG from '../../components/CardsListG';
 import CardItemG from '../../components/CardItemG';

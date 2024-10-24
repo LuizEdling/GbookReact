@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // importa o {Link}
 
-import '../../assets/CardsBiblioteca.css'; // importa o CSS
+import '../CardsBiblioteca/CardsBiblioteca.css'; // importa o CSS
 
 // define o componente CardsBiblioteca que recebe as props sectionId e o sectionData
 const CardsBiblioteca = ({ sectionId, sectionData }) => {

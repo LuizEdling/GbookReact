@@ -22,7 +22,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg navbar-custom">
                 <div className="container-fluid">
                     <div className="logo">
-                        <Link className="navbar-brand" to="/">
+                        <Link className="navbar-brand" to="/Home">
                             <img id="logoImage" src={logo} alt="logo-gbook" />
                         </Link>
                     </div>

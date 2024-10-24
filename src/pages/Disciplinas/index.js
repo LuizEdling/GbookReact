@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom'; // Importa Link do react-router-dom
 import Header from '../../components/Header';// importa o Header
 import Footer from '../../components/Footer'; //importa o Footer
 
-import '../../assets/Disciplinas.css'; // importa o CSS
+import '../Disciplinas/Disciplinas.css'; // importa o CSS
 import 'bootstrap/dist/css/bootstrap.min.css'; // importa o bootstrap
 
 
-// importando as imagens das disciplinas e a foto de perfil
+// importando as imagens das disciplinas e foto de perfil
 import FotoUsuario from '../../assets/images/perfil-semfoto.jpg';
-import Capa1 from '../../assets/images/disciplina01.png';
-import Capa2 from '../../assets/images/disciplina02.png';
-import Capa3 from '../../assets/images/disciplina03.png';
-import Capa4 from '../../assets/images/disciplina04.png';
-import Capa5 from '../../assets/images/disciplina05.png';
+import Capa1 from '../../assets/images/disciplinas/disciplina01.png';
+import Capa2 from '../../assets/images/disciplinas/disciplina02.png';
+import Capa3 from '../../assets/images/disciplinas/disciplina03.png';
+import Capa4 from '../../assets/images/disciplinas/disciplina04.png';
+import Capa5 from '../../assets/images/disciplinas/disciplina05.png';
 
 
 // criando um componente Disciplinas

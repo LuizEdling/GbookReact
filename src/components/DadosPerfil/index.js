@@ -1,5 +1,5 @@
 import React from "react"; 
-import '../../assets/DadosPerfil.css'; // Importando DadosPerfil 
+import '../DadosPerfil/DadosPerfil.css'; // Importando DadosPerfil 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando bootstrap
 
 export default function DadosPerfil(){
