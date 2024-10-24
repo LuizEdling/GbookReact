@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../../components/Header'; // importa o Header
 import Footer from '../../components/Footer'; //importa o Footer
 
-import '../../assets/Biblioteca.css'; // Importando CSS
+import '../Biblioteca/Biblioteca.css'; // Importando CSS
 
 import CardsBiblioteca from '../../components/CardsBiblioteca'; // importa o cardsBiblioteca
 

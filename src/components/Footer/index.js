@@ -1,8 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando Bootstra
 import '../Footer/Footer.css'; // Importando Footer
 
-import { Link } from 'react-router-dom';
-
 import github from '../../assets/images/footer/github.png';
 import instagram from '../../assets/images/footer/instagram.png';
 import email from '../../assets/images/footer/email.png';
@@ -12,7 +10,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-icons">
-          <a href="https://github.com/LuizEdling/AtividadeFinal" target="_blank">
+          <a href="https://github.com/LuizEdling/GbookReact" target="_blank">
             <img src={github} alt="Github" />
           </a>
 

@@ -1,4 +1,4 @@
-import '../../assets/Perfil.css' // Importando arquivo CSS do perfil
+import '../Perfil/Perfil.css' // Importando arquivo CSS do perfil
 import Header from '../../components/Header'; // Importando o Header
 import Footer from '../../components/Footer'; // Importando o Footer
 
