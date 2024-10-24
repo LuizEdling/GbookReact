@@ -10,11 +10,11 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-icons">
-          <a href="https://github.com/LuizEdling/GbookReact" target="_blank">
+          <a href="https://github.com/LuizEdling/GbookReact" target="_blank" rel="noreferrer">
             <img src={github} alt="Github" />
           </a>
 
-          <a href="https://www.instagram.com/gbookcr/" target="_blank">
+          <a href="https://www.instagram.com/gbookcr/" target="_blank" rel="noreferrer">
             <img src={instagram} alt="Instagram" />
           </a>
 

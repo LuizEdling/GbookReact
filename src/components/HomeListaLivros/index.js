@@ -4,11 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 import './HomeListaLivros.css';
 import capaBranca from '../../assets/images/capa-branca.jpg';
+import teste from '../../assets/images/publi.png';
 
 export default function HomeList(props) {
   const livros = [
     { id: 1, titulo: 'Livro 1', capa: capaBranca, alt: 'Capa do livro 1' },
-    { id: 2, titulo: 'Livro 2', capa: capaBranca, alt: 'Capa do livro 2' },
+    { id: 2, titulo: 'Livro 2', capa: teste, alt: 'Capa do livro 2' },
     { id: 3, titulo: 'Livro 3', capa: capaBranca, alt: 'Capa do livro 3' },
     { id: 4, titulo: 'Livro 4', capa: capaBranca, alt: 'Capa do livro 4' },
     { id: 5, titulo: 'Livro 5', capa: capaBranca, alt: 'Capa do livro 5' },

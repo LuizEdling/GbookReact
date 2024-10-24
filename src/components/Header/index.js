@@ -4,7 +4,7 @@ import '../Header/Header.css'; // Importando o css do Header
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando Bootstrap
 import logo from '../../assets/images/logo-gbook.png'; // Importando a logo
 
-const Header = () => {
+export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation(); // Hook do React Router para obter a localização atual
 
@@ -54,5 +54,3 @@ const Header = () => {
         </header>
     );
 };
-
-export default Header;
