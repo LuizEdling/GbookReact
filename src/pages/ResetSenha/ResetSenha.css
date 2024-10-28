@@ -1,8 +1,8 @@
 .ResetContainer {
   display: flex;
-  height: 100vh;
   background-color: #efeeee;
   justify-content: center;
+  height: 100vh;
 }
 
 .ResetForm {
@@ -54,6 +54,14 @@
   color: #ff2800;
 }
 
+#success{
+  color: #4cbb17;
+}
+
+#back{
+  text-decoration: none;
+}
+
 .ResetForm button {
   font-weight: bold;
   width: 100%;
@@ -71,4 +79,13 @@
 .ResetForm button:hover {
   transition: .2s;
   background-color: #623cea;
+}
+
+@media screen and (max-width: 400px) {
+  .ResetForm h1{
+    font-size: 11vw;
+  }
+  .ResetForm h3{
+    font-size: 5vw;
+  }
 }

@@ -4,18 +4,13 @@ import { Link, useNavigate } from 'react-router-dom';
 
 //Firebase
 import { auth } from '../../firebase/firebaseConnection';
-import {
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  GoogleAuthProvider
-} from 'firebase/auth';
+import {  signInWithEmailAndPassword } from 'firebase/auth';
 
 //Imagens
 import GBLogo from '../../assets/images/login/LogoMin.png';
 import mascote from '../../assets/images/login/mascote.png';
 
-
-export default function TestLogin() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [erroLogin, setErroLogin] = useState("");
@@ -25,28 +20,17 @@ export default function TestLogin() {
   async function loginSubmit(event) {
     event.preventDefault();
     await signInWithEmailAndPassword(auth, email, senha)
-      .then((value) => {
+      .then(() => {
         setEmail("");
         setSenha("");
         navigate('/Home');
       })
       .catch((error) => {
-        setErroLogin(true);
-      });
-  }
-
-  async function loginWithGoogle() {
-    const provider = new GoogleAuthProvider();
-    await signInWithPopup(auth, provider)
-      .then((result) => {
-        // O usuário foi autenticado com sucesso
-        const user = result.user;
-        console.log("Usuário logado com Google: ", user);
-        navigate('/Home'); // Navega para a página principal após o login
-      })
-      .catch((error) => {
-        console.error("Erro ao autenticar com Google: ", error);
-        setErroLogin(true);
+        if (error.code === 'auth/user-not-found') {
+          setErroLogin("Usuário não encontrado!");
+        } else if (error.code === 'auth/wrong-password') {
+          setErroLogin("Senha incorreta!");
+        }
       });
   }
 
@@ -80,12 +64,13 @@ export default function TestLogin() {
           
           {erroLogin && (
             <div>
-              <h3 id="alert">Credenciais incorretas!</h3>
+              <h3 id="alert">{erroLogin}</h3>
             </div>
           )}
 
+          
+
           <button type="submit">Entrar</button>
-          <button type="button" onClick={loginWithGoogle}>Entrar com Gmail</button> {/* Botão para login com Google */}
         </form>
       </div>
 
