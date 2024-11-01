@@ -13,6 +13,8 @@ import Livro from './pages/Livro';
 
 import Erro from './pages/Erro';
 
+import Teste from './pages/Teste';
+
 export default function RoutesApp(){
     return(
         <BrowserRouter>
@@ -27,6 +29,8 @@ export default function RoutesApp(){
                 <Route path="/pageDisciplinas/:title" element={<PageDisciplinas/>}/>
                 <Route path="/Livro" element={<Livro />} />
                 <Route path="*" element={<Erro/>}/>
+
+                <Route path="/Teste" element={<Teste/>}/>
             </Routes>
         </BrowserRouter>
     );
