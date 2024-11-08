@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import './Login.css';
-import { Link, useNavigate } from 'react-router-dom'; 
 
-//Firebase
-import { auth } from '../../firebase/firebaseConnection';
-import {  signInWithEmailAndPassword } from 'firebase/auth';
+import { AuthContext } from "../../context/auth";
+import { Link } from 'react-router-dom'; 
 
 //Imagens
 import GBLogo from '../../assets/images/login/LogoMin.png';
@@ -12,26 +10,15 @@ import mascote from '../../assets/images/login/mascote.png';
 
 export default function Login() {
   const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
-  const [erroLogin, setErroLogin] = useState("");
+  const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
+  const { signIn, loadingAuth } = useContext(AuthContext);
 
-  async function loginSubmit(event) {
-    event.preventDefault();
-    await signInWithEmailAndPassword(auth, email, senha)
-      .then(() => {
-        setEmail("");
-        setSenha("");
-        navigate('/Home');
-      })
-      .catch((error) => {
-        if (error.code === 'auth/user-not-found') {
-          setErroLogin("Usuário não encontrado!");
-        } else if (error.code === 'auth/wrong-password') {
-          setErroLogin("Senha incorreta!");
-        }
-      });
+  async function loginSubmit(e) {
+    e.preventDefault();
+    if (email !== '' && password !== ""){
+      await signIn(email, password);
+    }
   }
 
   return (
@@ -55,22 +42,16 @@ export default function Login() {
           <input 
             type="password"
             placeholder="Senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
 
           <Link to="/ResetSenha" id="esqueceuSenha">Esqueceu a senha?</Link>
-          
-          {erroLogin && (
-            <div>
-              <h3 id="alert">{erroLogin}</h3>
-            </div>
-          )}
 
-          
-
-          <button type="submit">Entrar</button>
+          <button type="submit">
+            {loadingAuth ? "Carregando.." : "Acessar"}
+          </button>
         </form>
       </div>
 
