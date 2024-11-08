@@ -11,9 +11,10 @@ export default function Perfil(){
   return(
     <div>
       <Header/>
-      <div className="divider"></div>
+      <div className='profileContainer'>
         <DadosPerfil/>
-        <Footer/>
       </div>
+      <Footer/>
+    </div>
     );
 }

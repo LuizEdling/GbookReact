@@ -1,18 +1,116 @@
-/*GERAL*/
+.profile-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-  }
-  
-  body{
-    background-color: rgb(27, 27, 27) !important;
-  }
-  
-  /*---------------------------*/
+.profile-content .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #efeeee;
+  padding: 20px;
+  width: 100vw;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
 
-#info-aluno #foto-aluno{
-    border-radius: 100%;
-    margin-bottom: 5px; /*Espaçamento estre foto e nome e instituição do aluno*/
-    margin-top: 25px;
+.profile-content .top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profile-content .top .logout-btn {
+  margin-left: auto;
+}
+
+.profile-content .form-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-content .label-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.profile-content .label-avatar img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  width: 150px;
+  height: 150px;
+  transition: 0.3s ease;
+}
+
+.profile-content .label-avatar img:hover {
+  border-color: #623cea;
+}
+
+.profile-content .form-profile label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.profile-content .form-profile input[type="text"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.profile-content .form-profile input[type="file"] {
+  display: none;
+}
+
+.profile-content .form-profile button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-content .form-profile button:hover {
+  background-color: #0056b3;
+}
+
+.profile-content .logout-btn {
+  margin-top: 10px;
+  background-color: #ff2800;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.profile-content .logout-btn:hover {
+  background-color: #c82333;
+}
+
+@media screen and (max-width: 580px){
+  .profile-content .container{
+    background: none;
+  }
+  .profile-content .top span{
+    color: #f4f0f0;
+  }
+  .profile-content .form-profile label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f4f0f0;
+  }
 }

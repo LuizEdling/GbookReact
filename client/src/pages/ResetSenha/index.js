@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import './ResetSenha.css';
+
 import { Link } from 'react-router-dom';
 import { getAuth, sendPasswordResetEmail } from "firebase/auth"; 
+import { toast } from 'react-toastify';
+
+
 
 import GBLogo from '../../assets/images/login/LogoMin.png';
 
 export default function ResetSenha() {
   const [email, setEmail] = useState("");
-  const [emailInvalido, setEmailInvalido] = useState(""); 
-  const [mensagemSucesso, setMensagemSucesso] = useState("");
+  const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false); 
 
   async function resetSubmit(event) {
@@ -19,15 +22,14 @@ export default function ResetSenha() {
   
     sendPasswordResetEmail(auth, email)
     .then(() => {
-      setMensagemSucesso("Email de redefinição de senha enviado com sucesso!");
-      setEmailInvalido("");
+      toast.success("Email de redefinição de senha enviado com sucesso!");
+      setSuccess(true);
     })
     .catch((error) => {
-      setMensagemSucesso("");
       if (error.code === "auth/user-not-found") {
-        setEmailInvalido("Email não encontrado!");
+        toast.error("Email não encontrado!");
       } else {
-        setEmailInvalido("Ocorreu um erro, tente novamente mais tarde.");
+        toast.error("Ocorreu um erro, tente novamente mais tarde.");
       }
     })
     .finally(() => {
@@ -56,23 +58,11 @@ export default function ResetSenha() {
             required
           />
           
-          {emailInvalido && (
-            <div>
-              <h3 id="alert">{emailInvalido}</h3> 
-            </div>
-          )}
-
-          {mensagemSucesso && (
-            <div>
-              <h3 id="success">{mensagemSucesso}</h3>
-            </div>
-          )}
-          
           <button type="submit" disabled={loading}>
             {loading ? "Enviando..." : "Enviar código"}
           </button>
 
-          {mensagemSucesso &&(
+          {success &&(
             <div>
              <Link to="/" id="back">Voltar para página de Login</Link>
             </div>
