@@ -8,7 +8,7 @@ import Perfil from '../pages/Perfil';
 import ResetSenha from '../pages/ResetSenha';
 
 import Curso from '../pages/Curso';
-import PageDisciplinas from '../pages/PageDisciplinas';
+import DisciplinaInfo from '../pages/DisciplinaInfo';
 import Livro from '../pages/Livro';
 
 import Erro from '../pages/Erro';
@@ -27,7 +27,7 @@ export default function RoutesApp() {
       <Route path="/perfil" element={<Private> <Perfil /> </Private>} />
 
       <Route path="/curso/:title" element={<Private> <Curso /> </Private>} />
-      <Route path="/pageDisciplinas/:title" element={<Private> <PageDisciplinas /> </Private>} />
+      <Route path="/DisciplinaInfo/:title" element={<Private> <DisciplinaInfo /> </Private>} />
       <Route path="/Livro" element={<Private> <Livro /> </Private>} />
 
       <Route path="*" element={<Erro />} />

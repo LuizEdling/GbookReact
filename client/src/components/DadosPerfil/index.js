@@ -2,12 +2,11 @@ import { useContext, useState } from 'react';
 import './DadosPerfil.css';
 
 import { AuthContext } from '../../context/auth';
+import { toast } from 'react-toastify';
 
 import { db, storage } from '../../config/firebaseConnection';
 import { doc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-
-import { toast } from 'react-toastify';
 
 import avatar from '../../assets/images/perfil-semfoto.jpg';
 
