@@ -1,5 +1,102 @@
-.subjectInfo .title {
-    display: flex;
-    justify-content: center;
-    color: #623cea;
+.subjectInfo {
+  padding: 12px;
+}
+
+.title h1 {
+  display: flex;
+  justify-content: center;
+  color: #623cea;
+  font-size: 2rem;
+}
+
+.subjectBooks ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subjectBooks ul li {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subjectBooks ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subjectBooks ul li img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.subjectBooks ul li h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subjectBooks ul li p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.subjectBooks ul li a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: #623cea;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.subjectBooks ul li a:hover {
+  background-color: #5129b8;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .subjectBooks ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .subjectBooks ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .subjectBooks ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 7vw;
+  }
+
+  .subjectBooks ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.subjectBooks p{
+  color: #f4f0f0;
 }

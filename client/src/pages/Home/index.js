@@ -6,7 +6,6 @@ import Footer from '../../components/Footer';
 
 //Componentes
 import HomeCarrossel from '../../components/HomeCarrossel';
-import HomeListaAutores from '../../components/HomeListaAutores';
 import HomeListaLivros from '../../components/HomeListaLivros';
 
 //Importando imagens dos slides
@@ -28,12 +27,6 @@ export default function Home() {
           alt2 = "Livro destaque semanal"
           slide3 = {slide3}
           alt3 = "Acesse o instagram da página: @GBOOKS"
-        />
-      </div>
-
-      <div id="Autores">
-        <HomeListaAutores 
-          tituloSecao="Autores mais acessados" 
         />
       </div>
 

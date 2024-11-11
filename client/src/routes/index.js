@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import Private from './Private';
 
 import Login from '../pages/Login';
 import Home from '../pages/Home';
@@ -7,13 +8,10 @@ import Disciplinas from '../pages/Disciplinas';
 import Perfil from '../pages/Perfil';
 import ResetSenha from '../pages/ResetSenha';
 
-import Curso from '../pages/Curso';
 import DisciplinaInfo from '../pages/DisciplinaInfo';
 import Livro from '../pages/Livro';
 
 import Erro from '../pages/Erro';
-
-import Private from './Private';
 
 export default function RoutesApp() {
   return (
@@ -21,14 +19,13 @@ export default function RoutesApp() {
       <Route path="/" element={<Login />} />
       <Route path="/ResetSenha" element={<ResetSenha />} />
 
-      <Route path="/home" element={<Private> <Home /> </Private>} />
-      <Route path="/biblioteca" element={<Private> <Biblioteca /> </Private>} />
-      <Route path="/disciplinas" element={<Private> <Disciplinas /> </Private>} />
-      <Route path="/perfil" element={<Private> <Perfil /> </Private>} />
+      <Route path="/Home" element={<Private> <Home /> </Private>} />
+      <Route path="/Biblioteca" element={<Private> <Biblioteca /> </Private>} />
+      <Route path="/Disciplinas" element={<Private> <Disciplinas /> </Private>} />
+      <Route path="/Perfil" element={<Private> <Perfil /> </Private>} />
 
-      <Route path="/curso/:title" element={<Private> <Curso /> </Private>} />
-      <Route path="/DisciplinaInfo/:title" element={<Private> <DisciplinaInfo /> </Private>} />
-      <Route path="/Livro" element={<Private> <Livro /> </Private>} />
+      <Route path="/DisciplinaInfo/:subjectId" element={<Private> <DisciplinaInfo /> </Private>} />
+      <Route path="/Livro/:bookId" element={<Private> <Livro /> </Private>} />
 
       <Route path="*" element={<Erro />} />
     </Routes>
