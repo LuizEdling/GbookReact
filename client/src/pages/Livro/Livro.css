@@ -1,51 +1,34 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-  
-body{
-    background-color: rgb(27, 27, 27) !important;
+.livro {
+    margin-bottom: 20px;
+    margin-top: -20px;
 }
 
-#livro h2 {
-    flex-grow: 1;
-    color: #FFBE0B;
-    text-align: center; /* Centraliza o texto */
-    font-size: 40px; /* Aumenta o tamanho da fonte */
-    margin: 0; /* Remove as margens padrão para garantir centralização */
+.livro h2 {
+    color: #ffbe0b;
+    text-align: center; 
+    font-size: 40px; 
 }
 
 .book-info h3, .book-info p {
-    color: white !important; /* Cor do texto para os detalhes do livro */
+    color: white;
 }
 
 .book-info p {
-    text-align: justify; /* Justifica o texto do resumo para melhorar a leitura */
+    text-align: justify; 
     text-justify: inter-word;
 }
 
-/* Ajustes para a imagem da capa do livro */
 .img-fluid {
-    width: 100%; /* Faz a imagem preencher a largura da div */
-    height: 100%; /* Faz a imagem preencher a altura da div */
-    object-fit: cover; /* Garante que a imagem cubra a div completamente */
-    border-radius: 5px; /* Arredondamento das bordas da imagem, se desejado */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave para dar destaque, se desejado */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Personalização do botão */
-.book-info button.btn-primary {
-    background-color: #007bff; /* Cor primária do Bootstrap para botões */
-    border-color: #007bff;
+.btn-color {
+    background-color: #623cea;
+    border: none;
 }
 
-.book-info button.btn-primary:hover {
-    background-color: #0056b3; /* Cor mais escura no hover */
-    border-color: #0056b3;
-}
-
-/* Centraliza o botão horizontalmente */
-.button-container {
-    display: flex;
-    justify-content: center !important;
+.btn-color:hover {
+    background-color: #4f31be;
 }

@@ -4,16 +4,13 @@ import './showSubjects.css';
 import { AuthContext } from '../../context/auth';
 import { db } from '../../config/firebaseConnection';
 import { collection, doc, getDoc } from 'firebase/firestore';
-
 import noBackground from '../../assets/images/disciplinas/noBackground.png';
 
 export default function ShowSubjects() {
   const { user } = useContext(AuthContext);
   const userSubjects = user.subjects; // Array de IDs de matérias
-  
   const [materias, setMaterias] = useState([]);
 
-  // Memoriza a função para evitar re-criação a cada renderização
   const fetchMateria = useCallback(async (subjectId) => {
     const collectionRef = collection(db, user.curso);
     const docRef = doc(collectionRef, subjectId);
@@ -24,15 +21,12 @@ export default function ShowSubjects() {
   useEffect(() => {
     const fetchAllMaterias = async () => {
       const materiasCarregadas = [];
-      
       for (const subjectId of userSubjects) {
         const materia = await fetchMateria(subjectId);
-        materiasCarregadas.push(materia);
+        materiasCarregadas.push({ ...materia, subjectId });
       }
-      
       setMaterias(materiasCarregadas);
     };
-    
     fetchAllMaterias();
   }, [userSubjects, fetchMateria]);
 
@@ -48,7 +42,7 @@ export default function ShowSubjects() {
             <div className="subject">
               <div className="subject-content">
                 <h2>{materia.nome}</h2>
-                <Link to={`/DisciplinaInfo/${encodeURIComponent(materia.nome)}`} className="link"> 
+                <Link to={`/DisciplinaInfo/${encodeURIComponent(materia.subjectId)}`} className="link"> 
                   <button className="acessar-disciplina">Acessar Disciplina</button>
                 </Link>
               </div>
