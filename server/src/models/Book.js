@@ -1,3 +1,4 @@
+// Importação da biblioteca mongoose
 const mongoose = require('mongoose');
 
 const bookSchema = new mongoose.Schema({
@@ -19,7 +20,7 @@ const bookSchema = new mongoose.Schema({
   },
   imgUrl: {
     type: String,
-    required: true
+    required: false
   },
   pdfUrl: {
     type: String,

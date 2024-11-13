@@ -1,8 +1,8 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // importa o bootstrap
-import '../Erro/Erro.css'; // Importando o css 
-import { Link } from 'react-router-dom'; // pra poder usar a tag <Link>
-import error404 from '../../assets/images/error404.png'; // importa a imagem de erro
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../Erro/Erro.css'; 
+import { Link } from 'react-router-dom';
+import error404 from '../../assets/images/error404.png';
 
 export default function Erro (){
   return (

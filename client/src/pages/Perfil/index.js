@@ -1,19 +1,13 @@
-import '../Perfil/Perfil.css' // Importando arquivo CSS do perfil
-import Header from '../../components/Header'; // Importando o Header
-import Footer from '../../components/Footer'; // Importando o Footer
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
-import DadosPerfil from '../../components/DadosPerfil'; // Importando DadosPerfil
-
-//Importando Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
+import DadosPerfil from '../../components/DadosPerfil';
 
 export default function Perfil(){  
   return(
     <div>
       <Header/>
-      <div className='profileContainer'>
-        <DadosPerfil/>
-      </div>
+      <DadosPerfil/>
       <Footer/>
     </div>
     );

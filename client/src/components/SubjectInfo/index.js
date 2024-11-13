@@ -4,6 +4,7 @@ import { AuthContext } from '../../context/auth';
 import { useParams } from 'react-router-dom';
 import { db } from '../../config/firebaseConnection';
 import { doc, getDoc } from 'firebase/firestore';
+import noImgBook from '../../assets/images/capa-branca.jpg';
 
 export default function SubjectInfo() {
   const { subjectId } = useParams();
@@ -57,8 +58,7 @@ export default function SubjectInfo() {
             {books.map(book => (
               <li key={book._id}>
                 <h2>{book.nome}</h2>
-                <img src={book.imgUrl} alt={book.nome} />
-                <p>{book.desc}</p>    
+                <img src={book.imgUrl || noImgBook} alt={book.nome} />
                 <a href={book.pdfUrl} target="_blank" rel="noopener noreferrer">Ler PDF</a>
               </li>
             ))}
