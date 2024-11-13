@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import { Navigate } from 'react-router-dom'
 import { AuthContext } from '../context/auth'
 
-export default function Private({ children }){
-  const { signed, loading } = useContext(AuthContext);
+export default function Private({ children, requiredType }){
+  const { signed, loading, user } = useContext(AuthContext);
 
   if(loading){
     return(
@@ -13,6 +13,10 @@ export default function Private({ children }){
 
   if(!signed){
     return  <Navigate to="/" />
+  }
+
+  if (requiredType && user?.user_type !== requiredType) {
+    return <Navigate to="*" />;
   }
 
   return children;

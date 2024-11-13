@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import './DadosPerfil.css';
-
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/auth';
 import { toast } from 'react-toastify';
 
@@ -89,11 +89,13 @@ export default function Profile() {
 
   }
 
-  return (
+  return ( 
     <div className="profile-content">
       <div className="container">
         <div className='top'>
-          <span><b>{instituicao}</b></span>
+          <Link to="/LivrosSalvos">
+            <button>Livros salvos</button>
+          </Link>
           <button className="logout-btn" onClick={() => logout()}>Sair</button>
         </div>
         <form className="form-profile" onSubmit={handleSubmit}>
@@ -109,13 +111,12 @@ export default function Profile() {
               <img src={avatarUrl} alt="Foto de perfil" width={250} height={250} />
             )}
           </label>
-
+          <label className='instituicao'><b>{instituicao}</b></label>
           <label>Nome</label>
           <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
 
           <button type="submit">Salvar</button>
         </form>
-
       </div>
 
     </div>

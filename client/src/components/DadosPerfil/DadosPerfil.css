@@ -22,6 +22,29 @@
   width: 100%;
 }
 
+.profile-content .container .top a {
+  text-decoration: none;
+  background-color: #623cea;
+  border-radius: 4px;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0 5px;
+}
+
+.profile-content .container .top a:hover {
+  background-color: #4a2bb6; /* Cor ao passar o mouse */
+  color: white; /* Cor do texto ao passar o mouse */
+}
+
+.profile-content .container .top a button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #f4f0f0;
+}
+
 .profile-content .top .logout-btn {
   margin-left: auto;
 }
@@ -56,6 +79,12 @@
 .profile-content .form-profile label {
   font-weight: bold;
   margin-top: 10px;
+  color: #333;
+}
+
+.profile-content .instituicao {
+  text-align: center;
+  font-weight: bold;
   color: #333;
 }
 

@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import { getAuth, sendPasswordResetEmail } from "firebase/auth"; 
 import { toast } from 'react-toastify';
 
-
-
 import GBLogo from '../../assets/images/login/LogoMin.png';
 
 export default function ResetSenha() {

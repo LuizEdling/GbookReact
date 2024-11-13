@@ -4,7 +4,6 @@ import './Login.css';
 import { AuthContext } from "../../context/auth";
 import { Link } from 'react-router-dom'; 
 
-//Imagens
 import GBLogo from '../../assets/images/login/LogoMin.png';
 import mascote from '../../assets/images/login/mascote.png';
 

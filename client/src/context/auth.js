@@ -51,7 +51,8 @@ export default function AuthProvider({ children }){
         avatarUrl: docSnap.data().avatarUrl,
         instituicao: docSnap.data().instituicao,
         curso: docSnap.data().curso,
-        subjects: docSnap.data().subjects
+        subjects: docSnap.data().subjects,
+        user_type: docSnap.data().user_type
       }
       console.log(data)
 
